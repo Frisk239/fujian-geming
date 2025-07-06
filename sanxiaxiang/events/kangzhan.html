@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抗战胜利</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #8B0000;
+        }
+        .card-body p {
+            line-height: 1.8;
+            text-align: justify;
+            text-justify: inter-character;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-logo">中国革命关键历史节点</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="xinhai.html">辛亥革命</a>
+            <a href="wusi.html">五四运动</a>
+            <a href="nanhu.html">中共一大</a>
+            <a href="nanchang.html">南昌起义</a>
+            <a href="changzheng.html">红军长征</a>
+            <a href="kangzhan.html">抗战胜利</a>
+            <a href="kaiguo.html">开国大典</a>
+            <a href="red-education.html">红色基地参观</a>
+        </div>
+    </nav>
+
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5 animate__animated animate__fadeIn" id="typed-title"></h1>
+        <h2 class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s" id="typed-year"></h2>
+
+        <div class="card mb-5 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="../image/kangzhanshengli.png" alt="抗战胜利" class="img-fluid" style="max-height: 400px;">
+                </div>
+                <div>
+                <h2>历史背景</h2>
+                <p>抗日战争胜利是在中国人民经过十四年艰苦卓绝的浴血奋战后取得的伟大胜利，
+                    这场战争既是中华民族反抗日本帝国主义侵略的正义之战，也是世界反法西斯战争的重要组成部分，
+                    中国人民以巨大牺牲为代价最终赢得了民族解放和国家独立。</p>
+                
+                <h2>事件过程</h2>
+                <p>1945年8月15日日本宣布无条件投降后，9月2日在东京湾美军密苏里号战列舰上举行正式投降签字仪式，
+                    9月9日中国战区受降仪式在南京举行，全国各地举行盛大庆祝活动，
+                    标志着中国人民抗日战争暨世界反法西斯战争取得最终胜利。</p>
+                
+                <h2>历史意义</h2>
+                <p>抗日战争胜利是近代以来中国反抗外敌入侵第一次取得完全胜利的民族解放战争，
+                    洗刷了百年民族耻辱，重新确立了中国在世界上的大国地位，为新中国的成立奠定了基础，
+                    同时为世界反法西斯战争胜利作出了重大贡献，极大增强了中华民族的自信心和凝聚力。</p>
+            </div>
+        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 初始化粒子背景和文字动画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 文字打字效果
+            new Typed('#typed-title', {
+                strings: ['抗战胜利'],
+                typeSpeed: 100,
+                showCursor: false
+            });
+            new Typed('#typed-year', {
+                strings: ['1945年'],
+                typeSpeed: 80,
+                startDelay: 500,
+                showCursor: false
+            });
+
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#c62828" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#c62828", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "sanxiaxiang",
+  "version": "1.0.0",
+  "description": "为暑期三下乡实践活动开发的一个项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frisk239/sanxiaxiang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frisk239/sanxiaxiang/issues"
+  },
+  "homepage": "https://github.com/Frisk239/sanxiaxiang#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

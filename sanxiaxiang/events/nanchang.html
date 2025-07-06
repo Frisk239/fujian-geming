@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南昌起义</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            font-family: 'Noto Serif SC', serif;
+        }
+        h1, h2, h3 {
+            font-weight: 700;
+            color: #8B0000;
+        }
+        .card-body p {
+            line-height: 1.8;
+            text-align: justify;
+            text-justify: inter-character;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-logo">中国革命关键历史节点</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="xinhai.html">辛亥革命</a>
+            <a href="wusi.html">五四运动</a>
+            <a href="nanhu.html">中共一大</a>
+            <a href="nanchang.html">南昌起义</a>
+            <a href="changzheng.html">红军长征</a>
+            <a href="kangzhan.html">抗战胜利</a>
+            <a href="kaiguo.html">开国大典</a>
+            <a href="red-education.html">红色基地参观</a>
+        </div>
+    </nav>
+
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5 animate__animated animate__fadeIn" id="typed-title"></h1>
+        <h2 class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s" id="typed-year"></h2>
+
+        <div class="card mb-5 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="../image/nanchangqiyi.png" alt="南昌起义" class="img-fluid" style="max-height: 400px;">
+                </div>
+                <div>
+                <h2>历史背景</h2>
+                <p>南昌起义是在大革命失败后，面对国民党反动派的血腥屠杀和革命陷入低潮的危急关头，
+                    中国共产党为挽救革命、武装反抗国民党反动派而发动的第一次武装暴动，
+                    标志着中国共产党独立领导革命战争和创建人民军队的开始。</p>
+                
+                <h2>事件过程</h2>
+                <p>1927年8月1日凌晨，在以周恩来为书记的中共前敌委员会领导下，
+                    贺龙、叶挺、朱德、刘伯承等率领北伐军两万余人，在江西南昌举行武装起义，
+                    经过四个多小时的激烈战斗，全歼守敌3000余人，占领南昌城，打响了武装反抗国民党反动派的第一枪。</p>
+                
+                <h2>历史意义</h2>
+                <p>南昌起义宣告了中国共产党独立领导革命武装斗争的开始，创建了第一支由党直接领导的人民军队，
+                    揭开了土地革命战争的序幕，为后来建立农村革命根据地积累了宝贵经验，8月1日也因此被确立为中国人民解放军的建军节。</p>
+            </div>
+        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 初始化粒子背景和文字动画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 文字打字效果
+            new Typed('#typed-title', {
+                strings: ['南昌起义'],
+                typeSpeed: 100,
+                showCursor: false
+            });
+            new Typed('#typed-year', {
+                strings: ['1927年'],
+                typeSpeed: 80,
+                startDelay: 500,
+                showCursor: false
+            });
+
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#c62828" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#c62828", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

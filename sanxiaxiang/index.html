@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国革命历史地图</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        #revolution-map {
+            height: 100vh;
+            width: 100%;
+        }
+        .custom-marker {
+            background: none;
+            border: none;
+        }
+        .leaflet-popup-content-wrapper .event-card {
+            background: #9A1F1A !important;
+            background: -webkit-linear-gradient(135deg, #9A1F1A, #C62828) !important;
+            background: linear-gradient(135deg, #9A1F1A, #C62828) !important;
+            color: white !important;
+            padding: 20px !important;
+            border-radius: 8px !important;
+            text-align: center !important;
+            min-width: 250px !important;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+            border: 1px solid rgba(255,255,255,0.1) !important;
+        }
+        
+        .leaflet-popup-content-wrapper {
+            background: transparent !important;
+            box-shadow: none !important;
+            border: none !important;
+        }
+        
+        .leaflet-popup-tip {
+            background: #9A1F1A !important;
+        }
+        
+        .event-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .event-card i {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: #FFD700;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
+        
+        .event-description {
+            font-size: 0.95rem;
+            margin: 15px 0;
+            line-height: 1.5;
+            padding: 10px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+        
+        .location-hint {
+            font-size: 0.8rem;
+            color: #FFD700;
+            margin: 5px 0;
+        }
+        .explore-btn {
+            background: #D4AF37;
+            color: #9A1F1A;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="index-page">
+<nav class="main-nav">
+    <div class="nav-logo">中国革命关键历史节点</div>
+    <div class="nav-links">
+        <a href="./index.html">首页</a>
+        <a href="./events/xinhai.html">辛亥革命</a>
+        <a href="./events/wusi.html">五四运动</a>
+        <a href="./events/nanhu.html">中共一大</a>
+        <a href="./events/nanchang.html">南昌起义</a>
+        <a href="./events/changzheng.html">红军长征</a>
+        <a href="./events/kangzhan.html">抗战胜利</a>
+        <a href="./events/kaiguo.html">开国大典</a>
+        <a href="./events/red-education.html">红色基地参观</a>
+    </div>
+</nav>
+
+    <!-- 地图容器 -->
+    <div id="revolution-map"></div>
+
+    <!-- 第三方库 -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.tilelayer.colorfilter@latest/dist/leaflet-tilelayer-colorfilter.min.css"/>
+    <script src="https://unpkg.com/leaflet.tilelayer.colorfilter@latest/dist/leaflet-tilelayer-colorfilter.min.js"></script>
+    
+    <!-- 本地脚本 -->
+    <script src="./js/revolution-map.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* 子页面基础样式 */
+.event-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.event-header {
+    background: #8B0000;
+    color: #FFD700;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.event-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+}
+
+.event-header i {
+    font-size: 2.5rem;
+    margin-right: 15px;
+}
+
+/* 内容区域 */
+.event-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.event-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-image-container {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border: 2px solid #8B0000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 游戏按钮区域 */
+.game-section {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(139,0,0,0.05);
+    border-radius: 8px;
+}
+
+.game-btn {
+    background: linear-gradient(to right, #FFD700, #D4AF37);
+    color: #8B0000;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.game-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(139,0,0,0.3);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .event-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .event-header {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .event-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .event-details, 
+    .event-image-container {
+        min-width: 100%;
+    }
+    
+    .event-image {
+        max-height: 300px;
+        margin-bottom: 15px;
+    }
+    
+    .game-section {
+        margin-top: 30px;
+        padding: 15px;
+    }
+    
+    .game-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

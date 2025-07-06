@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色教育基地参观</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+        .carousel {
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            background-color: rgba(100, 100, 100, 0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .carousel-control-prev {
+            left: 15px;
+        }
+        .carousel-control-next {
+            right: 15px;
+        }
+        .highlight {
+            font-style: italic;
+            color: #c00;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="main-nav">
+        <div class="nav-logo">中国革命关键历史节点</div>
+        <div class="nav-links">
+            <a href="../index.html">首页</a>
+            <a href="xinhai.html">辛亥革命</a>
+            <a href="wusi.html">五四运动</a>
+            <a href="nanhu.html">中共一大</a>
+            <a href="nanchang.html">南昌起义</a>
+            <a href="changzheng.html">红军长征</a>
+            <a href="kangzhan.html">抗战胜利</a>
+            <a href="kaiguo.html">开国大典</a>
+            <a href="red-education.html">红色基地参观</a>
+        </div>
+    </nav>
+
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5 animate__animated animate__fadeIn">以"码"为媒续薪火，计科学子探红途</h1>
+        <h2 class="text-center mb-4 animate__animated animate__fadeIn animate__delay-1s">暑期三下乡红色教育基地参观纪实</h2>
+        <div class="card mb-5 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-body">
+                <h3 class="card-title text-danger">福建省革命历史纪念馆</h3>
+                <p class="text-muted"><i class="fas fa-calendar-day me-2"></i>Day1: 2025.7.3</p>
+                <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>坐标:福建省革命历史纪念馆</p>
+                <p class="card-text">6人小分队整装出发!清晨8点准时集结,携带团徽与校徽,怀揣敬意开启红色研学之旅。在纪念馆专业讲解牌与学习导览带领下,我们沉浸式学习了福建革命史:从《闽山闽水物华新》主题展到中央苏区创建历程,每一件文物都在诉说峥嵘岁月,每一幅照片都镌刻着热血信仰。</p>
+                
+                <div id="revolutionCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../image/damenhezhao.jpg" class="d-block w-100" alt="纪念馆大门合照">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/guanneihezhao.jpg" class="d-block w-100" alt="馆内学习合照">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/canguan.jpg" class="d-block w-100" alt="参观过程">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/taolun.jpg" class="d-block w-100" alt="讨论交流">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#revolutionCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#revolutionCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="highlight">
+                "通过数字技术重现革命历史,我们深刻体会到'科技为民,代码报国'的时代使命。作为计科学子,既要精进算法,更要让技术创新成为传承红色基因的新载体!"
+            </div>
+        </div>
+
+        <div class="card mb-5 shadow-lg animate__animated animate__fadeInUp">
+            <div class="card-body">
+                <h3 class="card-title text-danger">林则徐纪念馆</h3>
+                <p class="text-muted"><i class="fas fa-calendar-day me-2"></i>Day2: 2025.7.4</p>
+                <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i>坐标:林则徐纪念馆</p>
+                <p class="card-text">6人小分队继续前行！上午9点抵达纪念馆，通过数字化展陈技术，深入了解民族英雄林则徐的生平事迹与爱国精神。从虎门销烟壮举到治理水利的智慧，我们深刻感受到科技与人文的融合力量。</p>
+                
+                <div id="linzexuCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../image/linzexuhezhao.jpg" class="d-block w-100" alt="林则徐纪念馆合照">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/linzexumingyan.jpg" class="d-block w-100" alt="林则徐诗词名句">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../image/linzexucanguan.jpg" class="d-block w-100" alt="参观林则徐纪念馆">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#linzexuCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#linzexuCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="highlight">
+                "通过编程再现历史场景，我们领悟到'科技传承文化，代码弘扬精神'的深刻意义。作为计科学子，既要掌握前沿技术，更要让数字技术成为传播中华优秀传统文化的新桥梁!"
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 初始化轮播和粒子背景
+        document.addEventListener('DOMContentLoaded', function() {
+            // 手动初始化轮播
+            const revolutionCarousel = new bootstrap.Carousel(document.getElementById('revolutionCarousel'));
+            const linzexuCarousel = new bootstrap.Carousel(document.getElementById('linzexuCarousel'));
+            
+            // 强制触发轮播重新计算
+            setTimeout(() => {
+                window.dispatchEvent(new Event('resize'));
+            }, 100);
+            
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#c62828" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: { enable: true, distance: 150, color: "#c62828", opacity: 0.4, width: 1 },
+                    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out" }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
