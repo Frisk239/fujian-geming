@@ -105,11 +105,11 @@ function addRevolutionMarkers(map) {
             const zoom = map.getZoom();
             const size = Math.max(20, 30 * Math.pow(1.2, zoom - 5));
             const colors = {
-                'yongding': '#D4AF37',
-                'gutian': '#9A1F1A',
-                'minxi': '#9A1F1A',
-                'minzhong': '#9A1F1A',
-                'houtian': '#9A1F1A'
+                'yongding': '#FFD700', // 金色
+                'gutian': '#FFA500',   // 橙色
+                'minxi': '#32CD32',    // 绿色
+                'minzhong': '#FF8C00',  // 深橙色
+                'houtian': '#FFD700'   // 金色
             };
             return L.divIcon({
                 html: `<i class="fas fa-${event.icon}" style="color:${colors[event.id]};font-size:${size}px;text-shadow:0 0 8px rgba(255,255,255,0.5);"></i>`,
@@ -140,20 +140,20 @@ function addRevolutionMarkers(map) {
             return locations[id] || '';
         }
 
-        // 创建悬停图标
-        function createHoverIcon() {
+        // 创建点击图标
+        function createActiveIcon() {
             const zoom = map.getZoom();
             const size = Math.max(25, 35 * Math.pow(1.2, zoom - 5));
             const colors = {
                 'yongding': '#FFD700',
-                'gutian': '#FF6B6B',
-                'minxi': '#FF6B6B',
-                'minzhong': '#FF6B6B',
-                'houtian': '#FF6B6B'
+                'gutian': '#FFA500',
+                'minxi': '#32CD32',
+                'minzhong': '#FF8C00',
+                'houtian': '#FFD700'
             };
             return L.divIcon({
                 html: `<i class="fas fa-${event.icon}" style="color:${colors[event.id]};font-size:${size}px;text-shadow:0 0 12px rgba(255,255,255,0.8);"></i>`,
-                className: 'custom-marker',
+                className: 'custom-marker-active',
                 iconSize: [size, size]
             });
         }
@@ -162,7 +162,7 @@ function addRevolutionMarkers(map) {
         let popupContent = `
             <div class="event-card">
                 <h3>${event.name}</h3>
-                <i class="fas fa-${event.icon} fa-2x" style="color:${event.id === 'yongding' ? '#D4AF37' : '#9A1F1A'}"></i>
+                <i class="fas fa-${event.icon} fa-2x" style="color:${event.id === 'yongding' ? '#FFD700' : event.id === 'gutian' ? '#FFA500' : event.id === 'minxi' ? '#32CD32' : event.id === 'minzhong' ? '#FF8C00' : '#FFD700'}"></i>
                 <p class="event-description">${event.description}</p>
                 <div class="d-flex justify-content-between mt-3">
                     <span class="location-hint">
@@ -179,14 +179,16 @@ function addRevolutionMarkers(map) {
             className: 'custom-popup'
         });
 
-        // 添加悬停效果
-        marker.on('mouseover', function() {
+        // 添加点击效果
+        marker.on('click', function() {
             this.openPopup();
-            this.setIcon(createHoverIcon());
+            this.setIcon(createActiveIcon());
         });
         
-        marker.on('mouseout', function() {
-            this.setIcon(createDynamicIcon());
+        // 点击空白处关闭弹窗
+        map.on('click', function() {
+            marker.setIcon(createDynamicIcon());
+            map.closePopup();
         });
     });
 }
