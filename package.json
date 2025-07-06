@@ -1,0 +1,20 @@
+{
+  "name": "fujian-geming",
+  "version": "1.0.0",
+  "description": "福建革命历史地图项目",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frisk239/fujian-geming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
