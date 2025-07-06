@@ -1,0 +1,42 @@
+[
+  {
+    "title": "永定暴动",
+    "time": "1928年6月-7月",
+    "location": "福建永定",
+    "key_figures": ["张鼎丞", "阮山", "卢肇西"],
+    "historical_significance": "福建规模最大的农民武装暴动，首创'抽多补少'土地分配政策，成为全国土地革命典范",
+    "image_path": "image\\yongdingbaodong.png"
+  },
+  {
+    "title": "古田会议",
+    "time": "1929年12月",
+    "location": "福建上杭古田",
+    "key_figures": ["毛泽东", "朱德", "陈毅"],
+    "historical_significance": "通过《古田会议决议》，确立'思想建党、政治建军'原则，成为建党建军纲领性文件",
+    "image_path": "image\\gutianhuiyi.png"
+  },
+  {
+    "title": "闽西革命根据地建立",
+    "time": "1928-1930年",
+    "location": "闽西地区（永定、上杭、龙岩等）",
+    "key_figures": ["毛泽东", "张鼎丞", "邓子恢"],
+    "historical_significance": "中央苏区重要组成部分，占中央苏区30多个县，为红军提供重要兵源和物资",
+    "image_path": "image\\minxigenjudi.png"
+  },
+  {
+    "title": "闽中三年游击战争",
+    "time": "1934-1937年",
+    "location": "莆田、福清等地",
+    "key_figures": ["王于洁", "刘突军", "黄孝敏"],
+    "historical_significance": "南方三年游击战争重要组成部分，建立罗汉里等游击根据地，后改编为抗日义勇军",
+    "image_path": "image\\minzhongyouji.png"
+  },
+  {
+    "title": "龙岩后田暴动",
+    "time": "1928年3月",
+    "location": "福建龙岩后田",
+    "key_figures": ["郭滴人", "邓子恢"],
+    "historical_significance": "福建最早的农民武装暴动，揭开闽西土地革命序幕",
+    "image_path": "image\\houtianbaodong.png"
+  }
+]
